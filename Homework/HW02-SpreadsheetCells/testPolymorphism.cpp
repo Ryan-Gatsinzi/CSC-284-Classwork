@@ -40,4 +40,8 @@ int main(){
     cout << "]";
 
 
+    cout << "\n\n Click any key to exit";
+    cin.get();
+
+
 }
