@@ -1,9 +1,9 @@
-/******************************************
- *  Author : Ryan Gatsinzi Udatinya
- *  Last updated on : Wed March 03 2026
- *  Desc: Definition of the SpreadSheetCell abstract base class
- *  File : SpreadSheetCell.cpp
- *******************************************/
+        /******************************************
+        *  Author : Ryan Gatsinzi Udatinya
+        *  Last updated on : Wed March 03 2026
+        *  Desc: Definition of the SpreadSheetCell abstract base class
+        *  File : SpreadSheetCell.cpp
+        *******************************************/
 
 #ifndef SPREADSHEETCELL_H
 #define SPREADSHEETCELL_H
