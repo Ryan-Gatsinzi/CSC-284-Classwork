@@ -139,7 +139,6 @@ int main()
     initscr();
     cbreak();
     noecho();
-    // keypad(roomListWin, TRUE);
     start_color();
 
     init_pair(1, COLOR_WHITE, COLOR_BLACK);
@@ -208,6 +207,9 @@ int main()
             continue;
         }
 
+
+        // threaded recieve method that is listening for incoming messages and updtates chatboxDisp.getData()
+        // 
         // Store line
         if (chatboxDisp.getCount() < MAX_LINES)
         {
@@ -223,4 +225,4 @@ int main()
     delwin(inputWin);
     endwin();
     return 0;
-}
+} 

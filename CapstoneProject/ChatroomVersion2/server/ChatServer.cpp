@@ -35,7 +35,6 @@ void removeClient(int clientSocket){
 
 void broadcastMessage(const vector<int> &activeClients, const char *buffer, int bytesReceived)
 {
-    // std::lock_guard<std::mutex> lock(broadcastMutex);
 
     for (int client : activeClients)
     {
@@ -132,7 +131,6 @@ int main(int argc, char* argv[])
     sockaddr_in serverAddr{};
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(port);
-    // serverAddr.sin_addr.s_addr = INADDR_ANY;
 
      if (inet_pton(AF_INET, ip.c_str(), &serverAddr.sin_addr) <= 0)
     {

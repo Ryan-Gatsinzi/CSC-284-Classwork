@@ -4,18 +4,17 @@
 #include<string>
 #include<vector>
 
-using namespace std;
 class Display {
     // static int numWindows = 0;
     //int id = numWindows -> in constructor
     private:
         int height, width, scroll, id, highlight;
-        vector<string> data;
+        std::vector<std::string> data;
     
     public:
         Display(int id) : id(id) { height = width = scroll = highlight = 0; }
 
-        Display(int id, int height, int width, vector<string> data = {}) : id(id), height(height), width(width), data(std::move(data)), scroll(0), highlight(0) {};
+        Display(int id, int height, int width, std::vector<std::string> data = {}) : id(id), height(height), width(width), data(std::move(data)), scroll(0), highlight(0) {};
         
         int getHeight(){ return height; }
 
@@ -29,7 +28,7 @@ class Display {
 
         int getHighlight(){ return highlight; }
 
-        vector<string>& getData(){ return data; }
+        std::vector<std::string>& getData(){ return data; }
 
         void setHeight(int height){ this->height = height; }
 
