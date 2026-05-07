@@ -272,6 +272,15 @@ void handleClient(int listenSocket, int clientSocket, const sockaddr_in &clientA
     closesocket(clientSocket);
 }
 
+void serverControl(){
+    string command = "";
+
+    while (command != "quit")
+        cin >> command;
+
+    exit(0);
+}
+
 int main(int argc, char *argv[])
 {
     string ip = (argc > 1 ? argv[1] : "127.0.0.1");
@@ -334,6 +343,10 @@ int main(int argc, char *argv[])
     rooms[0].setRoomData({"Welcome to the chat!", "This is a placeholder message.", "More messages will appear here later", ""});
     vector<thread> threads;
 
+    cout << "----Server On--- \n Enter quit to exit.\n";
+
+    thread serverControlThread(serverControl);
+    
     while (true)
     {
         sockaddr_in clientAddr{};
